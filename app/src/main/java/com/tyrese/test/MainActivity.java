@@ -74,6 +74,9 @@ public class MainActivity extends AppCompatActivity {
                 mScrollListener.resetStatus();
                 mAdapter.setNewData(ddd, isMore);
 
+                //如果没有结果的话
+                //mAdapter.removeFooter();
+
                 if (mRefreshLayout.isRefreshing()) {
                     mRefreshLayout.setRefreshing(false);
                 }
