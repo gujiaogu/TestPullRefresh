@@ -68,7 +68,13 @@ public class MainActivity extends AppCompatActivity {
                     itemData.setData("Test " + i);
                     ddd.add(itemData);
                 }
-
+                //上拉加载和下拉刷新的处理方式略微不同
+//                if (isRefresh) {
+//                    mScrollListener.resetStatus();
+//                    mAdapter.setNewData(data, mScrollListener.isNeedLoadMore());
+//                } else {
+//                    mAdapter.addItems(data, mScrollListener.isNeedLoadMore());
+//                }
                 boolean isMore = ddd.size() >= PAGE_SIZE;
                 mScrollListener.setNeedLoadMore(isMore);
                 mScrollListener.resetStatus();
